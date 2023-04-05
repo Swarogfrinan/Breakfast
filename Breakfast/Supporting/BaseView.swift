@@ -1,8 +1,20 @@
-//
-//  BaseView.swift
-//  Breakfast
-//
-//  Created by Ilya Vasilev on 06.04.2023.
-//
+import UIKit
 
-import Foundation
+class BaseView: UIView {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setViewAppearance()
+        setViewPosition()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    /// Configure your baseview here.
+    func setViewAppearance() { }
+    
+    /// Add and Layout your subviews here.
+    func setViewPosition() { }
+}
