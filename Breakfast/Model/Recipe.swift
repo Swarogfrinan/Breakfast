@@ -8,7 +8,8 @@ import Foundation
      let description: String?
      let instructions: String?
      let difficulty: Int
-
+     let similar: [RecipeBrief]
+     
      enum CodingKeys: String, CodingKey {
          case uuid
          case name
