@@ -23,6 +23,9 @@
 		43D9D33B29DDA4D20076CF5B /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D33A29DDA4D20076CF5B /* NetworkTask.swift */; };
 		43D9D34029DE191D0076CF5B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D33F29DE191D0076CF5B /* R.generated.swift */; };
 		43D9D34229DE19490076CF5B /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D34129DE19490076CF5B /* Values.swift */; };
+		43D9D34429DE1B470076CF5B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D34329DE1B470076CF5B /* AppCoordinator.swift */; };
+		43D9D34729DE1EF70076CF5B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D34629DE1EF70076CF5B /* BaseView.swift */; };
+		43D9D34929DE1EFF0076CF5B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D34829DE1EFF0076CF5B /* BaseViewController.swift */; };
 		8A18AD1B5CE2C8838112C69F /* Pods_Breakfast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952F3A52918C79C32E0BB7C2 /* Pods_Breakfast.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,9 @@
 		43D9D33A29DDA4D20076CF5B /* NetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
 		43D9D33F29DE191D0076CF5B /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		43D9D34129DE19490076CF5B /* Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Values.swift; sourceTree = "<group>"; };
+		43D9D34329DE1B470076CF5B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		43D9D34629DE1EF70076CF5B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		43D9D34829DE1EFF0076CF5B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		952F3A52918C79C32E0BB7C2 /* Pods_Breakfast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breakfast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F7B1DD596355D6C13ECFC6 /* Pods-Breakfast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakfast.release.xcconfig"; path = "Target Support Files/Pods-Breakfast/Pods-Breakfast.release.xcconfig"; sourceTree = "<group>"; };
 		D99E87BFC8AB9B9A39FE33EB /* Pods-Breakfast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakfast.debug.xcconfig"; path = "Target Support Files/Pods-Breakfast/Pods-Breakfast.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 		43D9D31729DD93670076CF5B /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				43D9D34529DE1EEC0076CF5B /* Base */,
 				43D9D33C29DE18BA0076CF5B /* Resources */,
 				43D9D32029DD950D0076CF5B /* Coordinator */,
 				43D9D31F29DD94EF0076CF5B /* Application */,
@@ -174,6 +181,7 @@
 			children = (
 				43D9D32529DD97060076CF5B /* Git */,
 				43D9D30329DD93160076CF5B /* AppDelegate.swift */,
+				43D9D34329DE1B470076CF5B /* AppCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -241,6 +249,15 @@
 				43D9D33F29DE191D0076CF5B /* R.generated.swift */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		43D9D34529DE1EEC0076CF5B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				43D9D34629DE1EF70076CF5B /* BaseView.swift */,
+				43D9D34829DE1EFF0076CF5B /* BaseViewController.swift */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,11 +401,14 @@
 				43D9D33529DDA21F0076CF5B /* RecipeDataRaw.swift in Sources */,
 				43D9D33129DDA1B60076CF5B /* RecipeResponse.swift in Sources */,
 				43D9D32B29DDA1010076CF5B /* Recipe.swift in Sources */,
+				43D9D34429DE1B470076CF5B /* AppCoordinator.swift in Sources */,
 				43D9D33929DDA29A0076CF5B /* Errors.swift in Sources */,
 				43D9D32F29DDA1800076CF5B /* RecipeListElement.swift in Sources */,
 				43D9D34229DE19490076CF5B /* Values.swift in Sources */,
 				43D9D33329DDA1DF0076CF5B /* RecipeListResponse.swift in Sources */,
 				43D9D32D29DDA13C0076CF5B /* RecipeBrief.swift in Sources */,
+				43D9D34729DE1EF70076CF5B /* BaseView.swift in Sources */,
+				43D9D34929DE1EFF0076CF5B /* BaseViewController.swift in Sources */,
 				43D9D33B29DDA4D20076CF5B /* NetworkTask.swift in Sources */,
 				43D9D34029DE191D0076CF5B /* R.generated.swift in Sources */,
 			);
