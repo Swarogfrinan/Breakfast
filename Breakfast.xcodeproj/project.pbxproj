@@ -16,6 +16,7 @@
 		43D9D32B29DDA1010076CF5B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D32A29DDA1010076CF5B /* Recipe.swift */; };
 		43D9D32D29DDA13C0076CF5B /* RecipeBrief.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D32C29DDA13C0076CF5B /* RecipeBrief.swift */; };
 		43D9D32F29DDA1800076CF5B /* RecipeListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D32E29DDA1800076CF5B /* RecipeListElement.swift */; };
+		43D9D33129DDA1B60076CF5B /* RecipeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D33029DDA1B60076CF5B /* RecipeResponse.swift */; };
 		8A18AD1B5CE2C8838112C69F /* Pods_Breakfast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952F3A52918C79C32E0BB7C2 /* Pods_Breakfast.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		43D9D32A29DDA1010076CF5B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		43D9D32C29DDA13C0076CF5B /* RecipeBrief.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBrief.swift; sourceTree = "<group>"; };
 		43D9D32E29DDA1800076CF5B /* RecipeListElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListElement.swift; sourceTree = "<group>"; };
+		43D9D33029DDA1B60076CF5B /* RecipeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResponse.swift; sourceTree = "<group>"; };
 		952F3A52918C79C32E0BB7C2 /* Pods_Breakfast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breakfast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F7B1DD596355D6C13ECFC6 /* Pods-Breakfast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakfast.release.xcconfig"; path = "Target Support Files/Pods-Breakfast/Pods-Breakfast.release.xcconfig"; sourceTree = "<group>"; };
 		D99E87BFC8AB9B9A39FE33EB /* Pods-Breakfast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakfast.debug.xcconfig"; path = "Target Support Files/Pods-Breakfast/Pods-Breakfast.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				43D9D32A29DDA1010076CF5B /* Recipe.swift */,
 				43D9D32C29DDA13C0076CF5B /* RecipeBrief.swift */,
 				43D9D32E29DDA1800076CF5B /* RecipeListElement.swift */,
+				43D9D33029DDA1B60076CF5B /* RecipeResponse.swift */,
 			);
 			name = DTO;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				43D9D32229DD95190076CF5B /* Coordinator.swift in Sources */,
 				43D9D30829DD93160076CF5B /* RecipesController.swift in Sources */,
 				43D9D30429DD93160076CF5B /* AppDelegate.swift in Sources */,
+				43D9D33129DDA1B60076CF5B /* RecipeResponse.swift in Sources */,
 				43D9D32B29DDA1010076CF5B /* Recipe.swift in Sources */,
 				43D9D32F29DDA1800076CF5B /* RecipeListElement.swift in Sources */,
 				43D9D32D29DDA13C0076CF5B /* RecipeBrief.swift in Sources */,
