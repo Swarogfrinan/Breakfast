@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = SwiftLint;
+			productName = SwiftLint;
 		};
 /* End PBXAggregateTarget section */
 
@@ -251,7 +252,7 @@
 		974B5023F17E9CA92B8F2E07D6097A99 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Sources/ConstraintAttributes.swift; sourceTree = "<group>"; };
 		979486118B3E90C08386079D57962701 /* SnapKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B48E66BEBE945ECE28B454A72F6E9D1 /* StoryboardResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardResource.swift; path = Sources/RswiftResources/StoryboardResource.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DB2B82146654D9F5E1C456881D5E3F8 /* Pods-Breakfast.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Breakfast.modulemap"; sourceTree = "<group>"; };
 		9DD5630B8328D4AFBEE7ABD425463C39 /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		9E004759232670314758EBCDD48F2FD2 /* ReuseIdentifier+Integrations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ReuseIdentifier+Integrations.swift"; path = "Sources/RswiftResources/Integrations/ReuseIdentifier+Integrations.swift"; sourceTree = "<group>"; };
@@ -315,7 +316,7 @@
 		F74039302030D3AC6409CD2603EB894A /* R.swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "R.swift-Info.plist"; sourceTree = "<group>"; };
 		F879CEF57541E7338A6C2C855F539B28 /* AlamofireExtended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlamofireExtended.swift; path = Source/AlamofireExtended.swift; sourceTree = "<group>"; };
 		F94EB593E2931F29A95DF0370FDE8AAE /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		FB1E402BEDDF918A2B0703C1A078DDCE /* Pods-Breakfast */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Breakfast"; path = Pods_Breakfast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB1E402BEDDF918A2B0703C1A078DDCE /* Pods_Breakfast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breakfast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -421,7 +422,6 @@
 				EAC76B9C3ADC3DFAABC1B2753F69EC0B /* UILayoutSupport+Extensions.swift */,
 				063B863543EAFF009CEB163AFD67ECBF /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -466,7 +466,6 @@
 				46CC10F1CA57AC6B36D2D7DC7E5DF5D3 /* Validation.swift */,
 				A0553F204EA2F87F08018D7A8B48BB36 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -508,7 +507,6 @@
 				DD112974B4B15F5258222D9AC65507AF /* ValidationError.swift */,
 				BFE11E563DF2D7303D9615528D002A79 /* Support Files */,
 			);
-			name = R.swift;
 			path = R.swift;
 			sourceTree = "<group>";
 		};
@@ -542,7 +540,7 @@
 			isa = PBXGroup;
 			children = (
 				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
-				FB1E402BEDDF918A2B0703C1A078DDCE /* Pods-Breakfast */,
+				FB1E402BEDDF918A2B0703C1A078DDCE /* Pods_Breakfast.framework */,
 				3EA5BDD6DA462D45C28EA963654D95D3 /* R.swift */,
 				979486118B3E90C08386079D57962701 /* SnapKit */,
 			);
@@ -554,7 +552,6 @@
 			children = (
 				FDFAD41D018C9316F1100103044E1E53 /* Support Files */,
 			);
-			name = SwiftLint;
 			path = SwiftLint;
 			sourceTree = "<group>";
 		};
@@ -721,7 +718,7 @@
 			);
 			name = "Pods-Breakfast";
 			productName = Pods_Breakfast;
-			productReference = FB1E402BEDDF918A2B0703C1A078DDCE /* Pods-Breakfast */;
+			productReference = FB1E402BEDDF918A2B0703C1A078DDCE /* Pods_Breakfast.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */ = {

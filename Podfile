@@ -8,6 +8,7 @@ target 'Breakfast' do
   # Pods for Breakfast
 pod 'Alamofire'
 pod 'SwiftLint'
+pod 'Kingfisher'
 pod 'SnapKit'
 pod 'R.swift'
 end
