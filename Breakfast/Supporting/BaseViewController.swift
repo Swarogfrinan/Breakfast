@@ -1,8 +1,10 @@
-//
-//  BaseViewController.swift
-//  Breakfast
-//
-//  Created by Ilya Vasilev on 06.04.2023.
-//
+import UIKit
 
-import Foundation
+class BaseViewController<View: UIView>: UIViewController {
+    // swiftlint:disable force_cast
+    var selfView: View { view as! View }
+    // swiftlint:enable force_cast
+    override func loadView() {
+        view = View()
+    }
+}
