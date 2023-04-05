@@ -56,15 +56,71 @@
 		43D9D30229DD93160076CF5B /* Breakfast */ = {
 			isa = PBXGroup;
 			children = (
-				43D9D30329DD93160076CF5B /* AppDelegate.swift */,
+				43D9D31729DD93670076CF5B /* Application */,
 				43D9D30529DD93160076CF5B /* SceneDelegate.swift */,
-				43D9D30729DD93160076CF5B /* ViewController.swift */,
+				43D9D31829DD93C10076CF5B /* Module */,
+				43D9D31E29DD94490076CF5B /* Model */,
 				43D9D30929DD93160076CF5B /* Main.storyboard */,
 				43D9D30C29DD93180076CF5B /* Assets.xcassets */,
 				43D9D30E29DD93180076CF5B /* LaunchScreen.storyboard */,
 				43D9D31129DD93180076CF5B /* Info.plist */,
 			);
 			path = Breakfast;
+			sourceTree = "<group>";
+		};
+		43D9D31729DD93670076CF5B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				43D9D30329DD93160076CF5B /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		43D9D31829DD93C10076CF5B /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				43D9D31A29DD93EB0076CF5B /* RecipecScreen */,
+				43D9D31D29DD94400076CF5B /* ViewModel */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		43D9D31A29DD93EB0076CF5B /* RecipecScreen */ = {
+			isa = PBXGroup;
+			children = (
+				43D9D31B29DD94080076CF5B /* View */,
+			);
+			path = RecipecScreen;
+			sourceTree = "<group>";
+		};
+		43D9D31B29DD94080076CF5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43D9D30729DD93160076CF5B /* ViewController.swift */,
+				43D9D31C29DD94150076CF5B /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		43D9D31C29DD94150076CF5B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		43D9D31D29DD94400076CF5B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		43D9D31E29DD94490076CF5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
