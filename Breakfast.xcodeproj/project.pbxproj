@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		43D9D30429DD93160076CF5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D30329DD93160076CF5B /* AppDelegate.swift */; };
-		43D9D30829DD93160076CF5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D30729DD93160076CF5B /* ViewController.swift */; };
+		43D9D30829DD93160076CF5B /* RecipesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D30729DD93160076CF5B /* RecipesController.swift */; };
 		43D9D30D29DD93180076CF5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D9D30C29DD93180076CF5B /* Assets.xcassets */; };
 		43D9D31029DD93180076CF5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D9D30E29DD93180076CF5B /* LaunchScreen.storyboard */; };
 		43D9D32229DD95190076CF5B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D32129DD95190076CF5B /* Coordinator.swift */; };
 		43D9D32429DD96FC0076CF5B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 43D9D32329DD96FC0076CF5B /* .gitignore */; };
+		43D9D32729DD97A40076CF5B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D32629DD97A40076CF5B /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		43D9D30029DD93160076CF5B /* Breakfast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breakfast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D9D30329DD93160076CF5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		43D9D30729DD93160076CF5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		43D9D30729DD93160076CF5B /* RecipesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesController.swift; sourceTree = "<group>"; };
 		43D9D30C29DD93180076CF5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43D9D30F29DD93180076CF5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43D9D31129DD93180076CF5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43D9D32129DD95190076CF5B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		43D9D32329DD96FC0076CF5B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		43D9D32629DD97A40076CF5B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +97,7 @@
 		43D9D31B29DD94080076CF5B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				43D9D30729DD93160076CF5B /* ViewController.swift */,
+				43D9D30729DD93160076CF5B /* RecipesController.swift */,
 				43D9D31C29DD94150076CF5B /* Cell */,
 			);
 			path = View;
@@ -127,6 +129,7 @@
 			children = (
 				43D9D32529DD97060076CF5B /* Git */,
 				43D9D30329DD93160076CF5B /* AppDelegate.swift */,
+				43D9D32629DD97A40076CF5B /* AppCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -218,8 +221,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D9D32729DD97A40076CF5B /* AppCoordinator.swift in Sources */,
 				43D9D32229DD95190076CF5B /* Coordinator.swift in Sources */,
-				43D9D30829DD93160076CF5B /* ViewController.swift in Sources */,
+				43D9D30829DD93160076CF5B /* RecipesController.swift in Sources */,
 				43D9D30429DD93160076CF5B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
