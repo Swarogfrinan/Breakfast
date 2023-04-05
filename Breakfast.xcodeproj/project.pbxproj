@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		43D9D30429DD93160076CF5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D30329DD93160076CF5B /* AppDelegate.swift */; };
-		43D9D30629DD93160076CF5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D30529DD93160076CF5B /* SceneDelegate.swift */; };
 		43D9D30829DD93160076CF5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D30729DD93160076CF5B /* ViewController.swift */; };
 		43D9D30B29DD93160076CF5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D9D30929DD93160076CF5B /* Main.storyboard */; };
 		43D9D30D29DD93180076CF5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D9D30C29DD93180076CF5B /* Assets.xcassets */; };
@@ -20,7 +19,6 @@
 /* Begin PBXFileReference section */
 		43D9D30029DD93160076CF5B /* Breakfast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breakfast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D9D30329DD93160076CF5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		43D9D30529DD93160076CF5B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		43D9D30729DD93160076CF5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		43D9D30A29DD93160076CF5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43D9D30C29DD93180076CF5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 			children = (
 				43D9D32529DD97060076CF5B /* Git */,
 				43D9D30329DD93160076CF5B /* AppDelegate.swift */,
-				43D9D30529DD93160076CF5B /* SceneDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -228,7 +225,6 @@
 				43D9D32229DD95190076CF5B /* Coordinator.swift in Sources */,
 				43D9D30829DD93160076CF5B /* ViewController.swift in Sources */,
 				43D9D30429DD93160076CF5B /* AppDelegate.swift in Sources */,
-				43D9D30629DD93160076CF5B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
