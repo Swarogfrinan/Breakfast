@@ -9,4 +9,5 @@ target 'Breakfast' do
 pod 'Alamofire'
 pod 'SwiftLint'
 pod 'SnapKit'
+pod 'R.swift'
 end
