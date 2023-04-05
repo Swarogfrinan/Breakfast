@@ -13,6 +13,7 @@
 		43D9D31029DD93180076CF5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D9D30E29DD93180076CF5B /* LaunchScreen.storyboard */; };
 		43D9D32229DD95190076CF5B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D32129DD95190076CF5B /* Coordinator.swift */; };
 		43D9D32429DD96FC0076CF5B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 43D9D32329DD96FC0076CF5B /* .gitignore */; };
+		43D9D32B29DDA1010076CF5B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D32A29DDA1010076CF5B /* Recipe.swift */; };
 		8A18AD1B5CE2C8838112C69F /* Pods_Breakfast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952F3A52918C79C32E0BB7C2 /* Pods_Breakfast.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		43D9D31129DD93180076CF5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43D9D32129DD95190076CF5B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		43D9D32329DD96FC0076CF5B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		43D9D32A29DDA1010076CF5B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		952F3A52918C79C32E0BB7C2 /* Pods_Breakfast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breakfast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F7B1DD596355D6C13ECFC6 /* Pods-Breakfast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakfast.release.xcconfig"; path = "Target Support Files/Pods-Breakfast/Pods-Breakfast.release.xcconfig"; sourceTree = "<group>"; };
 		D99E87BFC8AB9B9A39FE33EB /* Pods-Breakfast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakfast.debug.xcconfig"; path = "Target Support Files/Pods-Breakfast/Pods-Breakfast.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		43D9D31E29DD94490076CF5B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				43D9D32929DDA0AF0076CF5B /* DTO */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +172,14 @@
 				43D9D32329DD96FC0076CF5B /* .gitignore */,
 			);
 			path = Git;
+			sourceTree = "<group>";
+		};
+		43D9D32929DDA0AF0076CF5B /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				43D9D32A29DDA1010076CF5B /* Recipe.swift */,
+			);
+			name = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +320,7 @@
 				43D9D32229DD95190076CF5B /* Coordinator.swift in Sources */,
 				43D9D30829DD93160076CF5B /* RecipesController.swift in Sources */,
 				43D9D30429DD93160076CF5B /* AppDelegate.swift in Sources */,
+				43D9D32B29DDA1010076CF5B /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
