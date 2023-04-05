@@ -14,6 +14,7 @@
 		43D9D32229DD95190076CF5B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D32129DD95190076CF5B /* Coordinator.swift */; };
 		43D9D32429DD96FC0076CF5B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 43D9D32329DD96FC0076CF5B /* .gitignore */; };
 		43D9D32729DD97A40076CF5B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D32629DD97A40076CF5B /* AppCoordinator.swift */; };
+		8A18AD1B5CE2C8838112C69F /* Pods_Breakfast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952F3A52918C79C32E0BB7C2 /* Pods_Breakfast.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		43D9D32129DD95190076CF5B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		43D9D32329DD96FC0076CF5B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		43D9D32629DD97A40076CF5B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		952F3A52918C79C32E0BB7C2 /* Pods_Breakfast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breakfast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5F7B1DD596355D6C13ECFC6 /* Pods-Breakfast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakfast.release.xcconfig"; path = "Target Support Files/Pods-Breakfast/Pods-Breakfast.release.xcconfig"; sourceTree = "<group>"; };
+		D99E87BFC8AB9B9A39FE33EB /* Pods-Breakfast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakfast.debug.xcconfig"; path = "Target Support Files/Pods-Breakfast/Pods-Breakfast.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A18AD1B5CE2C8838112C69F /* Pods_Breakfast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E319CBB5FD614791FB406E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D99E87BFC8AB9B9A39FE33EB /* Pods-Breakfast.debug.xcconfig */,
+				C5F7B1DD596355D6C13ECFC6 /* Pods-Breakfast.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		32BDCC6A9CE763780721A83B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				952F3A52918C79C32E0BB7C2 /* Pods_Breakfast.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		43D9D2F729DD93160076CF5B = {
 			isa = PBXGroup;
 			children = (
 				43D9D30229DD93160076CF5B /* Breakfast */,
 				43D9D30129DD93160076CF5B /* Products */,
+				0E319CBB5FD614791FB406E3 /* Pods */,
+				32BDCC6A9CE763780721A83B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43D9D31429DD93180076CF5B /* Build configuration list for PBXNativeTarget "Breakfast" */;
 			buildPhases = (
+				EB936E279037614F27991097 /* [CP] Check Pods Manifest.lock */,
 				43D9D2FC29DD93160076CF5B /* Sources */,
 				43D9D2FD29DD93160076CF5B /* Frameworks */,
 				43D9D2FE29DD93160076CF5B /* Resources */,
+				2B1B073090A7F6F0FBB6C707 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,6 +242,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B1B073090A7F6F0FBB6C707 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Breakfast/Pods-Breakfast-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Breakfast/Pods-Breakfast-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Breakfast/Pods-Breakfast-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB936E279037614F27991097 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Breakfast-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43D9D2FC29DD93160076CF5B /* Sources */ = {
@@ -358,6 +427,7 @@
 		};
 		43D9D31529DD93180076CF5B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D99E87BFC8AB9B9A39FE33EB /* Pods-Breakfast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -386,6 +456,7 @@
 		};
 		43D9D31629DD93180076CF5B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5F7B1DD596355D6C13ECFC6 /* Pods-Breakfast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
