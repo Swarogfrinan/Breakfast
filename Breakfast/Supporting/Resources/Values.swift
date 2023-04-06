@@ -34,6 +34,20 @@ struct Constants {
     struct ButtonTitle {
         static let refresh = "Refresh"
     }
+    struct ErrorText {
+        static let basic = "The problem is on our side, we are already looking into it. Please try refreshing the screen later."
+        static let noInternet = "Try refreshing the screen when communication is restored."
+
+    }
+    
+    struct Description {
+        static let empty = "No description provided."
+    }
+    
+    struct DateDummy {
+        static let recipeCell = "Last update: "
+        static let recipeDetails = "Last Recipe Update:\n"
+    }
     
     
 }
