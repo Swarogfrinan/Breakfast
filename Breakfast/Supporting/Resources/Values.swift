@@ -25,5 +25,11 @@ struct Constants {
         static let recipes = "Recipes"
         static let recipeDetails = "RecipeDetails"
     }
- 
+    
+    struct ErrorType {
+        static let basic = "Something went wrong"
+        static let noInternet = "No Internet"
+    }
+    
+    
 }
