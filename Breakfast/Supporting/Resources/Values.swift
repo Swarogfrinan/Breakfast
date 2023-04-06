@@ -31,5 +31,9 @@ struct Constants {
         static let noInternet = "No Internet"
     }
     
+    struct ButtonTitle {
+        static let refresh = "Refresh"
+    }
+    
     
 }
