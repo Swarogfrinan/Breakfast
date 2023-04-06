@@ -20,4 +20,10 @@ struct Constants {
     struct API {
         static let baseURL = "https://test.kode-t.ru/"
     }
+    
+    struct NavigationBarTitle {
+        static let recipes = "Recipes"
+        static let recipeDetails = "RecipeDetails"
+    }
+ 
 }
