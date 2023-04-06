@@ -13,12 +13,14 @@ final class AppCoordinator: Coordinator {
     }()
     
     let networkTask: NetworkTask
+    let repository: Repository
     
     // MARK: - Coordinator
-    
+
     init(window: UIWindow) {
         self.window = window
         networkTask = NetworkTask()
+        repository = Repository(networkTask: networkTask)
     }
     
     override func start() {
@@ -30,10 +32,10 @@ final class AppCoordinator: Coordinator {
         window.makeKeyAndVisible()
         
         /// Show List
-        let recipeController = RecipesController(rootNavigationController: rootNavigationController)
+        let recipeCoordinator = RecipeCoordinator(rootNavigationController: rootNavigationController, repository: repository)
         
-        recipeController.delegate = self
-        addChildCoordinator(recipeController)
-        recipeController.start()
+        recipeCoordinator.delegate = self
+        addChildCoordinator(recipeCoordinator)
+        recipeCoordinator.start()
     }
 }
