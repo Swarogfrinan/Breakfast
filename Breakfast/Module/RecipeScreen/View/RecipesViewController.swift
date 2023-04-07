@@ -82,6 +82,11 @@ extension RecipesViewController : UISearchBarDelegate {
         filteredRecipes = viewModel.sortRecipesBy(sortCase: currentSortCase, recipes: filteredRecipes)
         tableView.reloadData()
     }
+    private func filterAndSort() {
+        filteredRecipes = viewModel.filterRecipesForSearchText(searchText: searchController.searchBar.text, scope: currentSearchCase)
+        filteredRecipes = viewModel.sortRecipesBy(sortCase: currentSortCase, recipes: filteredRecipes)
+        tableView.reloadData()
+    }
 
 }
 // MARK: - Constants
