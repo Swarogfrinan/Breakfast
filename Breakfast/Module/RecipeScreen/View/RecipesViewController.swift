@@ -123,6 +123,14 @@ private extension RecipesViewController {
         navigationItem.hidesSearchBarWhenScrolling = true
         navigationItem.searchController = searchController
     }
+    func setTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
+        TableCellViewModel.registerCell(tableView: tableView)
+    }
 }
 // MARK: - Constants
 
