@@ -5,7 +5,7 @@ class RecipesViewController: UIViewController {
     // MARK: - Views
     let tableView = UITableView()
     let searchController = UISearchController()
-    
+    let alertView = ErrorPageView()
     // MARK: - Properties
     
     let viewModel: RecipeViewModel
@@ -138,6 +138,44 @@ private extension RecipesViewController {
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+    }
+    
+    func bindToViewModel() {
+        viewModel.didFinishUpdating = { [weak self] in
+            self?.didFinishUpdating()
+        }
+        viewModel.didReceiveError = { [weak self] error in
+            self?.didReceiveError(error)
+        }
+    }
+    
+    func didFinishSuccessfully() {
+        hideCustomAlert(alertView)
+    }
+    
+    /// In case update was triggered by refreshing the table
+    func didFinishUpdating() {
+        filteredRecipes = viewModel.filterRecipesForSearchText(
+            searchText: searchController.searchBar.text,
+            scope: currentSearchCase)
+        
+        filteredRecipes = viewModel.sortRecipesBy(sortCase: currentSortCase, recipes: filteredRecipes)
+        tableView.reloadData()
+        hideCustomAlert(alertView)
+    }
+    
+    func didReceiveError(_ error: Error) {
+        let title: String
+        if let customError = error as? CustomError {
+            title = customError.errorTitle
+        } else {
+            title = Constants.ErrorType.basic
+        }
+        
+        showCustomAlert(alertView,
+                        title: title,
+                        message: error.localizedDescription,
+                        buttonText: Constants.ButtonTitle.refresh)
     }
 }
 // MARK: - Constants
