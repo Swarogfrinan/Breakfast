@@ -45,6 +45,27 @@ extension RecipesViewController : UITableViewDataSource {
         return Constants.Cell.height
     }
 }
+
+extension RecipesViewController : UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    }
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+    return true
+    }
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+    }
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        <#code#>
+    }
+  
+}
 // MARK: - Constants
 
 private extension Constants {
