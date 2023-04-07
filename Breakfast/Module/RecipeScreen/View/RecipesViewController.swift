@@ -31,6 +31,20 @@ extension RecipesViewController: UITableViewDelegate {
         filteredRecipes.count
     }
 }
+
+extension RecipesViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        filteredRecipes[indexPath.row].dequeueCell(tableView: tableView, indexPath: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        filteredRecipes[indexPath.row].cellSelected()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return Constants.Cell.height
+    }
+}
 // MARK: - Constants
 
 private extension Constants {
