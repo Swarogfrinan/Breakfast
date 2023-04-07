@@ -19,7 +19,7 @@ class RecipesViewController: UIViewController {
         }
     }
     
- 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -50,7 +50,7 @@ extension RecipesViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
     }
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-    return true
+        return true
     }
     func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
         
@@ -64,6 +64,7 @@ extension RecipesViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
         <#code#>
     }
+    
     private func hideSearchBar(withPlaceholder placeholder : String?) {
         searchController.searchBar.placeholder = placeholder
         searchController.searchBar.showsScopeBar = false
@@ -87,7 +88,22 @@ extension RecipesViewController : UISearchBarDelegate {
         filteredRecipes = viewModel.sortRecipesBy(sortCase: currentSortCase, recipes: filteredRecipes)
         tableView.reloadData()
     }
+}
 
+// MARK: - Actions
+@objc
+private extension RecipesViewController {
+    func sortByButtonTapped() {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: Constants.ActionSheet.sortByName, style: .default) { _ in
+            self.currentSortCase = .name
+        })
+        actionSheet.addAction(UIAlertAction(title: Constants.ActionSheet.sortByDate, style: .default) { _ in
+            self.currentSortCase = .date
+        })
+        actionSheet.addAction(UIAlertAction(title: Constants.ActionSheet.cancel, style: .cancel, handler: nil))
+        self.present(actionSheet, animated: true, completion: nil)
+    }
 }
 // MARK: - Constants
 
