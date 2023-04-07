@@ -38,6 +38,7 @@
 		43D9D36229DEF51D0076CF5B /* RecipeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D36129DEF51D0076CF5B /* RecipeCoordinator.swift */; };
 		43D9D36429DEF57A0076CF5B /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9D36329DEF57A0076CF5B /* RecipeViewModel.swift */; };
 		43DF185629E041FD001908CB /* ErrorPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DF185529E041FD001908CB /* ErrorPageView.swift */; };
+		43DF185829E0426F001908CB /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DF185729E0426F001908CB /* CustomAlert.swift */; };
 		8A18AD1B5CE2C8838112C69F /* Pods_Breakfast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952F3A52918C79C32E0BB7C2 /* Pods_Breakfast.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		43D9D36129DEF51D0076CF5B /* RecipeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCoordinator.swift; sourceTree = "<group>"; };
 		43D9D36329DEF57A0076CF5B /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		43DF185529E041FD001908CB /* ErrorPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPageView.swift; sourceTree = "<group>"; };
+		43DF185729E0426F001908CB /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		952F3A52918C79C32E0BB7C2 /* Pods_Breakfast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breakfast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F7B1DD596355D6C13ECFC6 /* Pods-Breakfast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakfast.release.xcconfig"; path = "Target Support Files/Pods-Breakfast/Pods-Breakfast.release.xcconfig"; sourceTree = "<group>"; };
 		D99E87BFC8AB9B9A39FE33EB /* Pods-Breakfast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakfast.debug.xcconfig"; path = "Target Support Files/Pods-Breakfast/Pods-Breakfast.debug.xcconfig"; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				43DF185529E041FD001908CB /* ErrorPageView.swift */,
+				43DF185729E0426F001908CB /* CustomAlert.swift */,
 			);
 			name = CustomAlert;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				43D9D35B29DEEF700076CF5B /* R.generated.swift in Sources */,
 				43D9D35D29DEEF9B0076CF5B /* SearchCase.swift in Sources */,
 				43D9D35F29DEEFA90076CF5B /* SortCase.swift in Sources */,
+				43DF185829E0426F001908CB /* CustomAlert.swift in Sources */,
 				43D9D34229DE19490076CF5B /* Values.swift in Sources */,
 				43D9D33329DDA1DF0076CF5B /* RecipeListResponse.swift in Sources */,
 				43D9D32D29DDA13C0076CF5B /* RecipeBrief.swift in Sources */,
