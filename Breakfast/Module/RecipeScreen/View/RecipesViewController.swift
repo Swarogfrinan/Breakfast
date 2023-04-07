@@ -71,7 +71,11 @@ extension RecipesViewController : UISearchBarDelegate {
         searchController.searchBar.endEditing(true)
         searchController.isActive = false
     }
-
+    
+    private func showSearchBar() {
+        searchController.searchBar.showsScopeBar = true
+        searchController.searchBar.setShowsCancelButton(true, animated: true)
+    }
 }
 // MARK: - Constants
 
