@@ -24,13 +24,4 @@ class RecipesViewController: UIViewController {
         super.viewDidLoad()
     }
 }
-// MARK: - UITableViewDelegate
-
-extension RecipesViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        filteredRecipes.count
-    }
-}
-
-
 
