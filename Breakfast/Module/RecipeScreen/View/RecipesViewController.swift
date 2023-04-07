@@ -130,6 +130,14 @@ private extension RecipesViewController {
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
         TableCellViewModel.registerCell(tableView: tableView)
+        setViewPosition()
+    }
+    
+    func setViewPosition() {
+        self.view.addSubview(tableView)
+        tableView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
 }
 // MARK: - Constants
