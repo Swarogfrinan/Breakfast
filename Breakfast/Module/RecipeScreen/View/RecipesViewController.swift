@@ -113,6 +113,16 @@ private extension RecipesViewController {
     func setSearchController() {
         searchController.searchBar.delegate = self
     }
+    
+    func setNavigationItem() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Constants.SortByButton.title,
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(sortByButtonTapped))
+        
+        navigationItem.hidesSearchBarWhenScrolling = true
+        navigationItem.searchController = searchController
+    }
 }
 // MARK: - Constants
 
