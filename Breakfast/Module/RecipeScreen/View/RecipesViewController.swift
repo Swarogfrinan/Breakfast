@@ -76,6 +76,13 @@ extension RecipesViewController : UISearchBarDelegate {
         searchController.searchBar.showsScopeBar = true
         searchController.searchBar.setShowsCancelButton(true, animated: true)
     }
+    private func resetSearchBar() {
+        searchController.searchBar.text = ""
+        filteredRecipes = viewModel.viewModels
+        filteredRecipes = viewModel.sortRecipesBy(sortCase: currentSortCase, recipes: filteredRecipes)
+        tableView.reloadData()
+    }
+
 }
 // MARK: - Constants
 
