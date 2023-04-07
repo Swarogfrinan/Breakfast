@@ -105,6 +105,15 @@ private extension RecipesViewController {
         self.present(actionSheet, animated: true, completion: nil)
     }
 }
+//Added method setSearchController
+// MARK: - Private Methods
+
+private extension RecipesViewController {
+    
+    func setSearchController() {
+        searchController.searchBar.delegate = self
+    }
+}
 // MARK: - Constants
 
 private extension Constants {
