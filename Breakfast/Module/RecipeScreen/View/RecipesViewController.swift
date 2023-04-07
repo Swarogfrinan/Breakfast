@@ -48,22 +48,28 @@ extension RecipesViewController : UITableViewDataSource {
 
 extension RecipesViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filterAndSort()
     }
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        showSearchBar()
         return true
     }
     func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
-        
+        hideSearchBar(withPlaceholder: searchBar.text)
+        return true
     }
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        
+        resetSearchBar()
+        hideSearchBar(withPlaceholder: searchBar.text)
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
+        hideSearchBar(withPlaceholder: searchBar.text)
     }
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-        <#code#>
+        filterAndSort()
     }
+    
+    // MARK: - SearchBar Helpers
     
     private func hideSearchBar(withPlaceholder placeholder : String?) {
         searchController.searchBar.placeholder = placeholder
@@ -105,7 +111,6 @@ private extension RecipesViewController {
         self.present(actionSheet, animated: true, completion: nil)
     }
 }
-//Added method setSearchController
 // MARK: - Private Methods
 
 private extension RecipesViewController {
