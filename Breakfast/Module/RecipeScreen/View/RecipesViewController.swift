@@ -64,7 +64,14 @@ extension RecipesViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
         <#code#>
     }
-  
+    private func hideSearchBar(withPlaceholder placeholder : String?) {
+        searchController.searchBar.placeholder = placeholder
+        searchController.searchBar.showsScopeBar = false
+        searchController.searchBar.setShowsCancelButton(false, animated: true)
+        searchController.searchBar.endEditing(true)
+        searchController.isActive = false
+    }
+
 }
 // MARK: - Constants
 
