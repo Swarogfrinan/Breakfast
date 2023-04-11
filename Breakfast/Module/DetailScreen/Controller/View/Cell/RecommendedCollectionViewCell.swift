@@ -58,4 +58,26 @@ extension RecommendedCollectionViewCell {
         viewModel.didUpdate = self.setupCellData
     }
 }
+    // MARK: - Creating SubView
+
+private extension RecommendedCollectionViewCell {
+    
+    static func makeRecipeImage() -> UIImageView {
+        let imageView = UIImageView()
+        
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = Constants.Design.cornerRadiusMain
+        
+        return imageView
+    }
+    
+    static func makeTitleLabel() -> UILabel {
+        let label = UILabel()
+        
+        label.textColor = .white
+        label.font = UIFont.titleFont
+        
+        return label
+    }
+}
 
