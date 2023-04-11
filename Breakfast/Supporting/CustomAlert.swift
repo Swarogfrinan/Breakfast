@@ -5,9 +5,11 @@ protocol CustomAlertDisplaying {
     var targetView: UIView { get }
     
     func setCustomAlert(_ alertView: ErrorPageView)
+    
     func removeCustomAlert(_ alertView: ErrorPageView)
     
     func showCustomAlert(_ alertView: ErrorPageView, title: String, message: String, buttonText: String)
+    
     func hideCustomAlert(_ alertView: ErrorPageView)
     
     func handleButtonTap()
