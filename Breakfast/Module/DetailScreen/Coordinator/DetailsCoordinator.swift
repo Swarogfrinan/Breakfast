@@ -37,4 +37,22 @@ final class DetailsCoordinator: Coordinator {
     }
 }
 
+// MARK: - ViewModel Delegate
 
+extension DetailsCoordinator: ViewModelCoordinatorDelegate {
+    func viewWillDisappear() {
+        rootNavigationController.navigationBar.prefersLargeTitles = true
+        self.finish()
+    }
+    
+    func didSelectRecipe(recipeID: String) {
+        let detailsCoordinator = DetailsCoordinator(rootNavigationController: rootNavigationController,
+                                                    repository: repository,
+                                                    recipeID: recipeID)
+        
+        detailsCoordinator.delegate = self.delegate
+        self.delegate?.addChildCoordinator(detailsCoordinator)
+        rootNavigationController.navigationBar.prefersLargeTitles = false
+        detailsCoordinator.start()
+    }
+}
