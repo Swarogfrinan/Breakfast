@@ -5,10 +5,11 @@ class RecipesViewController: UIViewController {
     // MARK: - Views
     let tableView = UITableView()
     let searchController = UISearchController()
-    let alertView = ErrorPageView()
+  
     // MARK: - Properties
-    
     let viewModel: RecipeViewModel
+    let alertView = ErrorPageView()
+    
     private var filteredRecipes: [TableCellViewModel] = []
     private var currentSearchCase = SearchCase.all
     
@@ -19,9 +20,20 @@ class RecipesViewController: UIViewController {
         }
     }
     
+   
+    
+    // MARK: - LifeCicle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backButtonTitle = Constants.BackButton.text
+        
+        setNavigationItem()
+        setTableView()
+        setSearchController()
+        bindToViewModel()
+        viewModel.reloadData()
+        setCustomAlert(alertView)
     }
 }
 // MARK: - UITableViewDelegate
@@ -93,6 +105,15 @@ extension RecipesViewController : UISearchBarDelegate {
         filteredRecipes = viewModel.filterRecipesForSearchText(searchText: searchController.searchBar.text, scope: currentSearchCase)
         filteredRecipes = viewModel.sortRecipesBy(sortCase: currentSortCase, recipes: filteredRecipes)
         tableView.reloadData()
+    }
+}
+
+// MARK: - CustomAlertDisplaying
+
+extension RecipesViewController: CustomAlertDisplaying {
+    
+    func handleButtonTap() {
+        viewModel.reloadData()
     }
 }
 
