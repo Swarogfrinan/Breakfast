@@ -46,4 +46,16 @@ extension RecommendedCollectionViewCell {
         return cell
     }
 }
+// MARK: - Public Methods
+
+extension RecommendedCollectionViewCell {
+    func setupCellData(viewModel: RecommendedImageCollectionViewCellViewModel) {
+        self.viewModel = viewModel
+        
+        imageLink = viewModel.imageLink
+        titleLabel.text = viewModel.name
+        
+        viewModel.didUpdate = self.setupCellData
+    }
+}
 
