@@ -23,4 +23,18 @@ final class DetailsViewModel {
         self.recipeID = recipeID
     }
 }
+// MARK: - Public Methods
+
+extension DetailsViewModel {
+    
+    func reloadData() {
+        self.didStartUpdating?()
+        getDataFromNetwork()
+    }
+    
+    func viewWillDisappear() {
+        coordinatorDelegate?.viewWillDisappear()
+    }
+}
+
 
