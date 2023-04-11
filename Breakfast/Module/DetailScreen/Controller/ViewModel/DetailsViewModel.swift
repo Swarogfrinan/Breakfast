@@ -8,6 +8,23 @@ protocol ViewModelCoordinatorDelegate: AnyObject {
 final class DetailsViewModel {
     // MARK: - Properties
     
+    weak var coordinatorDelegate: ViewModelCoordinatorDelegate?
+    
+    var images: [ImageCollectionViewCellViewModel] = []
+    var recipeImages: [ImageCollectionViewCellViewModel] = []
+    var recipeRecommendationImages: [RecommendedImageCollectionViewCellViewModel] = []
+    
+    var recipe: DataForDetails? {
+        didSet {
+            recipeImages = recipe?.imageLinks.map { viewModelForMain(imageLink: $0) } ?? []
+            recipeRecommendationImages = recipe?.similarRecipes.map {
+                viewModelForRecommended(name: $0.name,
+                                        imageLink: $0.image,
+                                        uuid: $0.uuid)
+            } ?? []
+        }
+    }
+    
     private let repository: Repository
     private let recipeID: String
     
@@ -18,6 +35,7 @@ final class DetailsViewModel {
     var didFinishUpdating: (() -> Void)?
     
     // MARK: - Initialization
+    
     init(repository: Repository, recipeID: String) {
         self.repository = repository
         self.recipeID = recipeID
