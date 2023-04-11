@@ -80,4 +80,35 @@ private extension RecommendedCollectionViewCell {
         return label
     }
 }
+// MARK: - Setting View
+
+private extension RecommendedCollectionViewCell {
+    
+    func setViewAppearance() {
+        setGradient()
+        setViewPosition()
+    }
+    
+    func setGradient() {
+        recipeImageView.setupGradient(frame: self.bounds,
+                                      colors: Constants.Gradient.colors,
+                                      locations: Constants.Gradient.locations)
+    }
+    
+    func setViewPosition() {
+        [recipeImageView, titleLabel].forEach { addSubview($0) }
+        
+        recipeImageView.snp.makeConstraints { make in
+            make.top.bottom.equalToSuperview().inset(Constants.Inset.classic)
+            make.leading.equalToSuperview()
+            make.width.equalToSuperview().dividedBy(Constants.RecipeImage.dividedBy)
+        }
+        
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(Constants.Inset.huge)
+            make.leading.trailing.equalToSuperview().inset(Constants.Inset.tiny)
+        }
+    }
+}
+
 
