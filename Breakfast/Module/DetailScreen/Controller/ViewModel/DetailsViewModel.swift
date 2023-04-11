@@ -36,5 +36,36 @@ extension DetailsViewModel {
         coordinatorDelegate?.viewWillDisappear()
     }
 }
+// MARK: - Private Methods
+
+private extension DetailsViewModel {
+    
+    func viewModelForMain(imageLink: String) -> ImageCollectionViewCellViewModel {
+        ImageCollectionViewCellViewModel(imageLink: imageLink)
+    }
+    
+    func viewModelForRecommended(name: String, imageLink: String, uuid: String) -> RecommendedImageCollectionViewCellViewModel {
+        let viewModel = RecommendedImageCollectionViewCellViewModel(name: name, imageLink: imageLink, uuid: uuid)
+        viewModel.didSelectRecommendedRecipe = { [weak self] recipeID in
+            self?.coordinatorDelegate?.didSelectRecipe(recipeID: recipeID)
+        }
+        return viewModel
+    }
+    
+    func getDataFromNetwork() {
+        repository.networkTask?.getRecipe(uuid: recipeID) { [weak self] response in
+            
+            switch response {
+            case .success(let recipeContainer):
+                self?.recipe = self?.repository.recipeToRecipeForDetails(recipeContainer.recipe)
+                self?.didFinishUpdating?()
+                
+            case .failure(let error):
+                self?.didReceiveError?(error)
+            }
+        }
+    }
+}
+
 
 
