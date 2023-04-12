@@ -17,4 +17,16 @@ class DetailsCollectionViewCell: UICollectionViewCell {
             recipeImageView.kf.setImage(with: URL(string: imageLink), placeholder: R.image.placeholder())
         }
     }
+
+// MARK: - Initialization
+
+override init(frame: CGRect) {
+    super.init(frame: frame)
+    setViewPosition()
 }
+
+required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+}
+}
+
