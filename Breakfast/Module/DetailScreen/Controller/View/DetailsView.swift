@@ -3,7 +3,7 @@ import UIKit
 
 final class DetailsView: BaseView {
     // MARK: - Views
-
+    
     var recipeCollectionView: UICollectionView
     var recommendationCollectionView: UICollectionView
     
@@ -19,10 +19,57 @@ final class DetailsView: BaseView {
     
     private let scrollView = UIScrollView()
     private let contentView = UIView()
+    
+    // MARK: - For Action
+    
+    var didPressSortByButton: (() -> Void)?
+    
+    // MARK: - Initialization
+    
+    init() {
+        let layoutRecipeImages = UICollectionViewFlowLayout()
+        layoutRecipeImages.scrollDirection = .horizontal
+        recipeCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layoutRecipeImages)
+        
+        let layoutRecipeRecommendationsImages = UICollectionViewFlowLayout()
+        layoutRecipeRecommendationsImages.scrollDirection = .horizontal
+        recommendationCollectionView = UICollectionView(frame: CGRect.zero,
+                                                        collectionViewLayout: layoutRecipeRecommendationsImages)
+        super.init(frame: CGRect.zero)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Setting View
+    
+    override func setViewAppearance() {
+        backgroundColor = R.color.backgroundColor()
+        scrollView.showsVerticalScrollIndicator = false
+        
+        makeRecipeImagesCollection()
+        makeRecipeRecommendationsImagesCollection()
+    }
+    
+    override func setViewPosition() {
+        addSubview()
+        
+        setPositionMain()
+        setPositionTop()
+        setPositionDifficulty()
+        setPositionInstruction()
+        setPositionRecommendation()
+    }
 }
-// MARK: - For Action
+// MARK: - Actions
 
-var didPressSortByButton: (() -> Void)?
+@objc
+private extension DetailsView {
+    func sortByButtonPressed() {
+        didPressSortByButton?()
+    }
+}
 
 // MARK: - Creating SubViews
 
