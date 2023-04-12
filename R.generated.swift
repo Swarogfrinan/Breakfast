@@ -13,10 +13,14 @@ let R = _R(bundle: Bundle(for: BundleFinder.self))
 struct _R {
   let bundle: Foundation.Bundle
   var color: color { .init(bundle: bundle) }
+  var image: image { .init(bundle: bundle) }
   var file: file { .init(bundle: bundle) }
   var storyboard: storyboard { .init(bundle: bundle) }
 
   func color(bundle: Foundation.Bundle) -> color {
+    .init(bundle: bundle)
+  }
+  func image(bundle: Foundation.Bundle) -> image {
     .init(bundle: bundle)
   }
   func file(bundle: Foundation.Bundle) -> file {
@@ -33,12 +37,41 @@ struct _R {
     let developmentRegion = "en"
   }
 
-  /// This `_R.color` struct is generated, and contains static references to 1 colors.
+  /// This `_R.color` struct is generated, and contains static references to 8 colors.
   struct color {
     let bundle: Foundation.Bundle
 
     /// Color `AccentColor`.
     var accentColor: RswiftResources.ColorResource { .init(name: "AccentColor", path: [], bundle: bundle) }
+
+    /// Color `backgroundColor`.
+    var backgroundColor: RswiftResources.ColorResource { .init(name: "backgroundColor", path: [], bundle: bundle) }
+
+    /// Color `cellBackgroundColor`.
+    var cellBackgroundColor: RswiftResources.ColorResource { .init(name: "cellBackgroundColor", path: [], bundle: bundle) }
+
+    /// Color `pageControlColorMain`.
+    var pageControlColorMain: RswiftResources.ColorResource { .init(name: "pageControlColorMain", path: [], bundle: bundle) }
+
+    /// Color `pageControlColorSecondary`.
+    var pageControlColorSecondary: RswiftResources.ColorResource { .init(name: "pageControlColorSecondary", path: [], bundle: bundle) }
+
+    /// Color `tableBackgroundColor`.
+    var tableBackgroundColor: RswiftResources.ColorResource { .init(name: "tableBackgroundColor", path: [], bundle: bundle) }
+
+    /// Color `textColorSecondary`.
+    var textColorSecondary: RswiftResources.ColorResource { .init(name: "textColorSecondary", path: [], bundle: bundle) }
+
+    /// Color `textViewBackgroundColor`.
+    var textViewBackgroundColor: RswiftResources.ColorResource { .init(name: "textViewBackgroundColor", path: [], bundle: bundle) }
+  }
+
+  /// This `_R.image` struct is generated, and contains static references to 1 images.
+  struct image {
+    let bundle: Foundation.Bundle
+
+    /// Image `placeholder`.
+    var placeholder: RswiftResources.ImageResource { .init(name: "placeholder", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
   }
 
   /// This `_R.file` struct is generated, and contains static references to 1 resource files.
