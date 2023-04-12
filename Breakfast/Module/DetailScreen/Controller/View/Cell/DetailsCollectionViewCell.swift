@@ -56,6 +56,17 @@ extension DetailsCollectionViewCell {
         viewModel.didUpdate = self.setCellData
     }
 }
+// MARK: - Private Methods
+
+private extension DetailsCollectionViewCell {
+    
+    func setViewPosition() {
+        addSubview(recipeImageView)
+        recipeImageView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+}
 // MARK: - Constants
 
 private extension Constants {
