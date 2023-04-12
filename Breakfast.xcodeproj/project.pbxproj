@@ -152,6 +152,7 @@
 		431D9C2629E56AAA0048F448 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				431D9C2A29E56D5D0048F448 /* DetailsViewController.swift */,
 				431D9C2729E56B080048F448 /* View */,
 				431D9C2829E56B140048F448 /* ViewModel */,
 			);
@@ -162,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				431D9C3629E5A0B50048F448 /* Cell */,
-				431D9C2A29E56D5D0048F448 /* DetailsViewController.swift */,
 				431D9C2C29E56DAA0048F448 /* DetailsView.swift */,
 				431D9C2E29E56DCA0048F448 /* DiffucultyView.swift */,
 			);
@@ -182,6 +182,7 @@
 		431D9C2929E56B280048F448 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				43D9D35829DEEF3D0076CF5B /* DataForDetails.swift */,
 			);
 			name = Model;
 			path = ../Controller/Model;
@@ -396,7 +397,6 @@
 				43D9D35129DECFBD0076CF5B /* DataForCell.swift */,
 				43D9D35C29DEEF9B0076CF5B /* SearchCase.swift */,
 				43D9D35E29DEEFA90076CF5B /* SortCase.swift */,
-				43D9D35829DEEF3D0076CF5B /* DataForDetails.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
