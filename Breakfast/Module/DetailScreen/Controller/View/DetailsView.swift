@@ -225,5 +225,23 @@ private extension DetailsView {
         }
     }
 }
+// MARK: - Constants
 
+private extension Constants {
+    struct SortByButton {
+        static let title = "Sort by"
+    }
+    struct SearchBar {
+        static let placeholder = "Search"
+    }
+    struct RecommendationImageCollection {
+        static let height = CGFloat(190)
+    }
+    struct RecipeImageCollection {
+        static let height = CGFloat(300)
+    }
+    struct Text {
+        static let numberOfLinesStandart = 2
+    }
+}
 
