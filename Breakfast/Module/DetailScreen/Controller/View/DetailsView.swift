@@ -126,4 +126,104 @@ private extension DetailsView {
         return label
     }
 }
+// MARK: - Set Position
+
+private extension DetailsView {
+
+    func addSubview() {
+        addSubview(scrollView)
+        scrollView.addSubview(contentView)
+
+        [recipeCollectionView,
+         pageControl,
+         timestampLabel,
+         recipeNameLabel,
+         descriptionTextLabel,
+         difficultyTitleLabel,
+         difficultyView,
+         instructionTitleLabel,
+         instructionTextLabel,
+         recommendedTitleLabel,
+         recommendationCollectionView].forEach { contentView.addSubview($0) }
+    }
+
+    func setPositionMain() {
+        scrollView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+
+        contentView.snp.makeConstraints { make in
+            make.top.bottom.equalTo(scrollView)
+            make.leading.trailing.equalTo(self)
+        }
+    }
+
+    func setPositionTop() {
+        recipeCollectionView.snp.makeConstraints { make in
+            make.top.leading.trailing.equalToSuperview()
+            make.height.equalTo(Constants.RecipeImageCollection.height)
+        }
+
+        pageControl.snp.makeConstraints { make in
+            make.bottom.equalTo(recipeCollectionView.snp.bottom)
+            make.centerX.equalTo(recipeCollectionView.snp.centerX)
+        }
+
+        timestampLabel.snp.makeConstraints { make in
+            make.bottom.equalTo(recipeNameLabel.snp.bottom)
+            make.trailing.equalToSuperview().inset(Constants.Inset.classic)
+        }
+
+        recipeNameLabel.snp.makeConstraints { make in
+            make.top.equalTo(recipeCollectionView.snp.bottom).inset(-Constants.Inset.classic)
+            make.leading.equalToSuperview().inset(Constants.Inset.classic)
+            make.trailing.equalTo(timestampLabel.snp.leading).offset(-Constants.Inset.classic)
+        }
+
+        descriptionTextLabel.snp.makeConstraints { make in
+            make.top.equalTo(recipeNameLabel.snp.bottom).inset(-Constants.Inset.classic)
+            make.leading.trailing.equalToSuperview().inset(Constants.Inset.classic)
+        }
+    }
+
+    func setPositionDifficulty() {
+        difficultyTitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(descriptionTextLabel.snp.bottom).inset(-Constants.Inset.classic)
+            make.leading.trailing.equalToSuperview().inset(Constants.Inset.classic)
+        }
+
+        difficultyView.snp.makeConstraints { make in
+            make.top.equalTo(difficultyTitleLabel.snp.bottom).inset(-Constants.Inset.classic)
+            make.leading.equalToSuperview().inset(Constants.Inset.classic)
+            make.trailing.lessThanOrEqualToSuperview().inset(Constants.Inset.classic)
+        }
+    }
+
+    func setPositionInstruction() {
+        instructionTitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(difficultyView.snp.bottom).inset(-Constants.Inset.classic)
+            make.leading.trailing.equalToSuperview().inset(Constants.Inset.classic)
+        }
+
+        instructionTextLabel.snp.makeConstraints { make in
+            make.top.equalTo(instructionTitleLabel.snp.bottom).inset(-Constants.Inset.classic)
+            make.leading.trailing.equalToSuperview().inset(Constants.Inset.classic)
+        }
+    }
+
+    func setPositionRecommendation() {
+        recommendedTitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(instructionTextLabel.snp.bottom).inset(-Constants.Inset.classic)
+            make.leading.trailing.equalToSuperview().inset(Constants.Inset.classic)
+        }
+
+        recommendationCollectionView.snp.makeConstraints { make in
+            make.top.equalTo(recommendedTitleLabel.snp.bottom)
+            make.bottom.equalTo(contentView)
+            make.leading.trailing.equalTo(contentView)
+            make.height.equalTo(Constants.RecommendationImageCollection.height)
+        }
+    }
+}
+
 
