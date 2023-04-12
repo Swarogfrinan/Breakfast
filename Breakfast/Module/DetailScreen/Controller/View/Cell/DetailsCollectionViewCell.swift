@@ -29,4 +29,24 @@ required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
 }
 }
+// MARK: - Self creating
 
+extension DetailsCollectionViewCell {
+    
+    static func registerCell(collectionView: UICollectionView) {
+        collectionView.register(DetailsCollectionViewCell.self, forCellWithReuseIdentifier: Constants.cellReuseIdentifier)
+    }
+    
+    static func dequeueCell(collectionView: UICollectionView, indexPath: IndexPath) -> DetailsCollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cellReuseIdentifier,
+                                                            for: indexPath) as? DetailsCollectionViewCell else {
+            return DetailsCollectionViewCell()
+        }
+        return cell
+    }
+}
+// MARK: - Constants
+
+private extension Constants {
+    static let cellReuseIdentifier = "RecipeCollectionViewCellSK"
+}
