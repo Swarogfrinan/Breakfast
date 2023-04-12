@@ -110,5 +110,24 @@ private extension RecommendedCollectionViewCell {
         }
     }
 }
+// MARK: - Constants
+
+private extension Constants {
+    static let cellReuseIdentifier = "RecommendationCollectionViewCellSK"
+    
+    struct RecipeImage {
+        static let dividedBy = CGFloat(3 / 2)
+    }
+    
+    struct Gradient {
+        static let colors = [UIColor.black.withAlphaComponent(0.74).cgColor, UIColor.white.withAlphaComponent(0).cgColor]
+        static let locations = [NSNumber(0.0), NSNumber(0.5)]
+    }
+}
+
+private extension UIFont {
+    static let titleFont = UIFont.systemFont(ofSize: 21, weight: .semibold)
+}
+
 
 
