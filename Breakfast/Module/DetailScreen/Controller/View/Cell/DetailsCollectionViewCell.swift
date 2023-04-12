@@ -45,6 +45,17 @@ extension DetailsCollectionViewCell {
         return cell
     }
 }
+// MARK: - Public Methods
+
+extension DetailsCollectionViewCell {
+    
+    func setCellData(viewModel: ImageCollectionViewCellViewModel) {
+        self.viewModel = viewModel
+        imageLink = viewModel.data
+        
+        viewModel.didUpdate = self.setCellData
+    }
+}
 // MARK: - Constants
 
 private extension Constants {
