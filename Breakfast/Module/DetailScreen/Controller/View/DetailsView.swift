@@ -6,9 +6,24 @@ final class DetailsView: BaseView {
 
     var recipeCollectionView: UICollectionView
     var recommendationCollectionView: UICollectionView
+    
+    let pageControl = UIPageControl()
+    let recipeNameLabel = DetailsView.makeRecipeNameLabel()
+    let timestampLabel = DetailsView.makeTimestampLabel()
+    let descriptionTextLabel = DetailsView.makeTextLabel()
+    let difficultyTitleLabel = DetailsView.makeTitleLabel()
+    let difficultyView = DifficultyView()
+    let instructionTitleLabel = DetailsView.makeTitleLabel()
+    let instructionTextLabel = DetailsView.makeTextLabel()
+    let recommendedTitleLabel = DetailsView.makeTitleLabel()
+    
     private let scrollView = UIScrollView()
     private let contentView = UIView()
 }
+// MARK: - For Action
+
+var didPressSortByButton: (() -> Void)?
+
 // MARK: - Creating SubViews
 
 private extension DetailsView {
